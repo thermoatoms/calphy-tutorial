@@ -1,0 +1,44 @@
+calculations:
+- element: Cu
+  lattice: structures/Cu.fcc.data
+  mass: 63.546
+  equilibration_control: berendsen
+  md:
+    timestep: 0.001
+  mode: ts
+  n_equilibration_steps: 10000
+  n_iterations: 1
+  n_switching_steps: 25000
+  pair_coeff: '* * potentials/CuNi.eam.alloy Cu'
+  pair_style: eam/alloy
+  pressure: 0.0
+  queue:
+    cores: 4
+    scheduler: local
+  reference_phase: solid
+  temperature:
+  - 1200.0
+  - 1400.0
+  spring_constants: [2.22]
+- element: Cu
+  lattice: structures/Cu.lqd.data
+  mass: 63.546
+  equilibration_control: berendsen
+  md:
+    timestep: 0.001
+  mode: ts
+  n_equilibration_steps: 10000
+  n_iterations: 1
+  n_switching_steps: 25000
+  pair_coeff: '* * potentials/CuNi.eam.alloy Cu'
+  pair_style: eam/alloy
+  pressure: 0.0
+  queue:
+    cores: 4
+    scheduler: local
+  reference_phase: liquid
+  temperature:
+  - 1200.0
+  - 1400.0
+  spring_constants: [2.22]
+  melting_cycle: False

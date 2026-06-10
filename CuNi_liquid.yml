@@ -1,0 +1,73 @@
+calculations:
+- element:
+  - Cu
+  - Ni
+  lattice: structures/Cu075Ni025.lqd.data
+  mass: 
+  - 63.546
+  - 58.6934
+  equilibration_control: berendsen
+  md:
+    timestep: 0.001
+  mode: fe
+  n_equilibration_steps: 10000
+  n_iterations: 1
+  n_switching_steps: 25000
+  pair_coeff: '* * potentials/CuNi.eam.alloy Cu Ni'
+  pair_style: eam/alloy
+  pressure: 0.0
+  queue:
+    cores: 4
+    scheduler: local
+  reference_phase: liquid
+  temperature:
+  - 1400.0
+  melting_cycle: False
+- element:
+  - Cu
+  - Ni
+  lattice: structures/Cu050Ni050.lqd.data
+  mass: 
+  - 63.546
+  - 58.6934
+  equilibration_control: berendsen
+  md:
+    timestep: 0.001
+  mode: fe
+  n_equilibration_steps: 10000
+  n_iterations: 1
+  n_switching_steps: 25000
+  pair_coeff: '* * potentials/CuNi.eam.alloy Cu Ni'
+  pair_style: eam/alloy
+  pressure: 0.0
+  queue:
+    cores: 4
+    scheduler: local
+  reference_phase: liquid
+  temperature:
+  - 1400.0
+  melting_cycle: False
+- element:
+  - Cu
+  - Ni
+  lattice: structures/Cu025Ni075.lqd.data
+  mass: 
+  - 63.546
+  - 58.6934
+  equilibration_control: berendsen
+  md:
+    timestep: 0.001
+  mode: fe
+  n_equilibration_steps: 10000
+  n_iterations: 1
+  n_switching_steps: 25000
+  pair_coeff: '* * potentials/CuNi.eam.alloy Cu Ni'
+  pair_style: eam/alloy
+  pressure: 0.0
+  queue:
+    cores: 4
+    scheduler: local
+  reference_phase: liquid
+  temperature:
+  - 1400.0
+  melting_cycle: False

@@ -1,0 +1,43 @@
+calculations:
+- element: Ni
+  lattice: structures/Ni.fcc.data
+  mass: 58.6934
+  equilibration_control: berendsen
+  md:
+    timestep: 0.001
+  mode: ts
+  n_equilibration_steps: 10000
+  n_iterations: 1
+  n_switching_steps: 25000
+  pair_coeff: '* * potentials/CuNi.eam.alloy Ni'
+  pair_style: eam/alloy
+  pressure: 0.0
+  queue:
+    cores: 4
+    scheduler: local
+  reference_phase: solid
+  temperature:
+  - 1400.0
+  - 1600.0
+  spring_constants: [3.29]
+- element: Ni
+  lattice: structures/Ni.lqd.data
+  mass: 58.6934
+  equilibration_control: berendsen
+  md:
+    timestep: 0.001
+  mode: ts
+  n_equilibration_steps: 10000
+  n_iterations: 1
+  n_switching_steps: 25000
+  pair_coeff: '* * potentials/CuNi.eam.alloy Ni'
+  pair_style: eam/alloy
+  pressure: 0.0
+  queue:
+    cores: 4
+    scheduler: local
+  reference_phase: liquid
+  temperature:
+  - 1400.0
+  - 1600.0
+  melting_cycle: False

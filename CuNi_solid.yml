@@ -1,0 +1,82 @@
+calculations:
+- element:
+  - Cu
+  - Ni
+  lattice: structures/Cu.fcc.data
+  mass: 
+  - 63.546
+  - 58.6934
+  equilibration_control: berendsen
+  md:
+    timestep: 0.001
+  mode: composition_scaling
+  composition_scaling:
+    output_chemical_composition:
+      Cu: 192
+      Ni: 64
+  folder_prefix: Cu075
+  n_equilibration_steps: 10000
+  n_iterations: 1
+  n_switching_steps: 25000
+  pair_coeff: '* * potentials/CuNi.eam.alloy Cu Ni'
+  pair_style: eam/alloy
+  pressure: 0.0
+  queue:
+    cores: 4
+    scheduler: local
+  temperature:
+  - 1400.0
+- element:
+  - Cu
+  - Ni
+  lattice: structures/Cu.fcc.data
+  mass: 
+  - 63.546
+  - 58.6934
+  equilibration_control: berendsen
+  md:
+    timestep: 0.001
+  mode: composition_scaling
+  composition_scaling:
+    output_chemical_composition:
+      Cu: 128
+      Ni: 128
+  folder_prefix: Cu050
+  n_equilibration_steps: 10000
+  n_iterations: 1
+  n_switching_steps: 25000
+  pair_coeff: '* * potentials/CuNi.eam.alloy Cu Ni'
+  pair_style: eam/alloy
+  pressure: 0.0
+  queue:
+    cores: 4
+    scheduler: local
+  temperature:
+  - 1400.0
+- element:
+  - Cu
+  - Ni
+  lattice: structures/Cu.fcc.data
+  mass: 
+  - 63.546
+  - 58.6934
+  equilibration_control: berendsen
+  md:
+    timestep: 0.001
+  mode: composition_scaling
+  composition_scaling:
+    output_chemical_composition:
+      Cu: 64
+      Ni: 192
+  folder_prefix: Cu025
+  n_equilibration_steps: 10000
+  n_iterations: 1
+  n_switching_steps: 25000
+  pair_coeff: '* * potentials/CuNi.eam.alloy Cu Ni'
+  pair_style: eam/alloy
+  pressure: 0.0
+  queue:
+    cores: 4
+    scheduler: local
+  temperature:
+  - 1400.0
